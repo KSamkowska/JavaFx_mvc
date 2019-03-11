@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="405.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
+   <children>
+      <Pane fx:id="imagePane" layoutX="8.0" layoutY="47.0" prefHeight="343.0" prefWidth="268.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="343.0" fitWidth="268.0" layoutY="7.0" onMouseEntered="#onMouseEntered" onMousePressed="#onMousePressed" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Button fx:id="wczytajButton" layoutX="339.0" layoutY="46.0" mnemonicParsing="false" onAction="#wczytaj" text="Wczytaj" />
+      <Button fx:id="czyscButton" layoutX="449.0" layoutY="46.0" mnemonicParsing="false" onAction="#czysc" text="Czysc" />
+      <HBox layoutX="283.0" layoutY="105.0" prefHeight="285.0" prefWidth="360.0">
+         <children>
+            <Canvas fx:id="canvas" height="285.0" style="-fx-cursor: move;" width="360.0" />
+         </children>
+      </HBox>
+      <Label fx:id="labelFoto" contentDisplay="CENTER" layoutX="14.0" layoutY="17.0" onMouseEntered="#onMouseEntered" prefHeight="40.0" prefWidth="237.0" text=" Canvas na obrazie z sieci" textAlignment="CENTER" />
+      <TextField fx:id="sciezka" layoutX="294.0" layoutY="12.0" prefHeight="25.0" prefWidth="262.0" promptText="wpisz adres URL nowego obrazka" />
+   </children>
+</AnchorPane>
